@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generater Using JavaScript</title>
+</head>
+<body>
+    <div class="body">
+        <h1>Random Password Generater Using JavaScirpt</h1>
+        <input type="text" id="password" placeholder="Password Here" readonly>
+        <div class="copy">
+            <i class="fas fa-clipboard" title="Copy Password To Clopboard" onclick="copyPassword()"></i>
+        </div>
+        <button onclick="generatePass()">Generate Password</button>
+    </div>
+    
+</body>
+<script>
+    function generatePass(){
+        var chracters="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*(){}[]";
+        var passwordLenght=12;
+        var password="";
+        for(var i=0;i<=passwordLenght;i++){
+            var randomNumber=Math.floor(Math.random() * chracters.length);
+            password+=chracters.substring(randomNumber, randomNumber+1);
+
+        }
+        document.getElementById("password").value=password;
+    }
+
+
+    function copyPassword(){
+        var copyText=document.getElementById("password");
+        copyText.select();
+        copyText.setSelectionRange(0, 999);
+        document.execCommand("copy");
+    }
+</script>
+</html>
+
+
