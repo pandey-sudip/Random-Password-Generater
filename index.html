@@ -9,15 +9,14 @@
     <title>Random Password Generater Using JavaScript</title>
 </head>
 <body>
+
+<body>
     <div class="body">
-        <h1>Random Password Generater Using JavaScirpt</h1>
-        <input type="text" id="password" placeholder="Password Here" readonly>
-        <div class="copy">
-            <i class="fas fa-clipboard" title="Copy Password To Clopboard" onclick="copyPassword()"></i>
-        </div>
-        <button onclick="generatePass()">Generate Password</button>
+        <h1>Random Password Generater</h1>
+        <input type="text" name="" placeholder="Create password" id="password" readonly>
+        <i class="far fa-clipboard" onclick="copyPassword()" title="Copy To Clipboard"></i>
+        <div id="but" onclick="genPassword()">Generate Password</div>
     </div>
-    
 </body>
 <script>
     function generatePass(){
